@@ -16,6 +16,7 @@
 		F71850BC1BAD0BE900FFC2B5 /* Table_ViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850BB1BAD0BE900FFC2B5 /* Table_ViewUITests.swift */; };
 		F71850CA1BAD0DDF00FFC2B5 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850C91BAD0DDF00FFC2B5 /* DetailController.swift */; settings = {ASSET_TAGS = (); }; };
 		F71850CC1BAD0FEC00FFC2B5 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850CB1BAD0FEC00FFC2B5 /* TableData.swift */; settings = {ASSET_TAGS = (); }; };
+		F782C32E1BB77589005BDBB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F782C32D1BB77589005BDBB8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F71850BD1BAD0BE900FFC2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71850C91BAD0DDF00FFC2B5 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		F71850CB1BAD0FEC00FFC2B5 /* TableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
+		F782C32D1BB77589005BDBB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F782C32E1BB77589005BDBB8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		F718508F1BAD0BE900FFC2B5 = {
 			isa = PBXGroup;
 			children = (
+				F782C32D1BB77589005BDBB8 /* MapKit.framework */,
 				F718509A1BAD0BE900FFC2B5 /* Table View */,
 				F71850AF1BAD0BE900FFC2B5 /* Table ViewTests */,
 				F71850BA1BAD0BE900FFC2B5 /* Table ViewUITests */,
@@ -491,6 +495,7 @@
 				F71850C21BAD0BE900FFC2B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F71850C31BAD0BE900FFC2B5 /* Build configuration list for PBXNativeTarget "Table ViewTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				F71850C51BAD0BE900FFC2B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F71850C61BAD0BE900FFC2B5 /* Build configuration list for PBXNativeTarget "Table ViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +513,7 @@
 				F71850C81BAD0BE900FFC2B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

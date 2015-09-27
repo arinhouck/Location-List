@@ -60,9 +60,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjC-Gq-Pp6">
-                                <rect key="frame" x="40" y="84" width="240" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWn-rE-Wqi">
                                 <rect key="frame" x="30" y="257" width="260" height="54"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
@@ -70,11 +67,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-uV-HCH">
-                                <rect key="frame" x="30" y="348" width="260" height="164"/>
+                                <rect key="frame" x="30" y="400" width="260" height="148"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0wn-w8-gLu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="185"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Use-g5-JFC">
+                                <rect key="frame" x="40" y="355" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-HA-ICL">
+                                <rect key="frame" x="183" y="355" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zzC-zU-eX6">
+                                <rect key="frame" x="100" y="309" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="3Nh-0N-gGw" eventType="valueChanged" id="qXR-ZS-dS5"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -82,7 +102,10 @@
                     <connections>
                         <outlet property="detailDescription" destination="hx5-uV-HCH" id="Vlg-9e-Osy"/>
                         <outlet property="detailTitle" destination="CWn-rE-Wqi" id="emm-gf-S6K"/>
-                        <outlet property="imageView" destination="TjC-Gq-Pp6" id="Ewg-1h-pjf"/>
+                        <outlet property="latitudeTextField" destination="Use-g5-JFC" id="rPV-Wy-WDi"/>
+                        <outlet property="longitudeTextField" destination="dRI-HA-ICL" id="KiB-LY-Qly"/>
+                        <outlet property="map" destination="0wn-w8-gLu" id="Hnf-aC-0av"/>
+                        <outlet property="segmentedMapType" destination="zzC-zU-eX6" id="qW6-R4-dWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rl-OQ-iiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
