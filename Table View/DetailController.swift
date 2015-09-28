@@ -20,14 +20,18 @@ class DetailController: UIViewController {
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
 
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var segmentedMapType: UISegmentedControl!
     @IBOutlet weak var map: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         detailTitle.text = self.locationName
         detailDescription.text = self.locationDesc
         markAddress(self.locationName)
+        
+        image.image = UIImage(named: "map-" + self.imageName)
         
         // Titles for Segemented Button
         segmentedMapType.setTitle("Standard", forSegmentAtIndex: 0)
