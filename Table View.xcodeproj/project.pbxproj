@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70A40541BDB592500BFE4A5 /* EditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A40531BDB592500BFE4A5 /* EditController.swift */; settings = {ASSET_TAGS = (); }; };
 		F718509C1BAD0BE900FFC2B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718509B1BAD0BE900FFC2B5 /* AppDelegate.swift */; };
 		F718509E1BAD0BE900FFC2B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718509D1BAD0BE900FFC2B5 /* ViewController.swift */; };
 		F71850A11BAD0BE900FFC2B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F718509F1BAD0BE900FFC2B5 /* Main.storyboard */; };
@@ -15,7 +16,10 @@
 		F71850B11BAD0BE900FFC2B5 /* Table_ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850B01BAD0BE900FFC2B5 /* Table_ViewTests.swift */; };
 		F71850BC1BAD0BE900FFC2B5 /* Table_ViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850BB1BAD0BE900FFC2B5 /* Table_ViewUITests.swift */; };
 		F71850CA1BAD0DDF00FFC2B5 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850C91BAD0DDF00FFC2B5 /* DetailController.swift */; settings = {ASSET_TAGS = (); }; };
-		F71850CC1BAD0FEC00FFC2B5 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71850CB1BAD0FEC00FFC2B5 /* TableData.swift */; settings = {ASSET_TAGS = (); }; };
+		F71EC3381BD573D00000107E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71EC3371BD573D00000107E /* CoreData.framework */; };
+		F71EC33B1BD575140000107E /* Table_View.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F71EC3391BD575140000107E /* Table_View.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		F71EC33E1BD578140000107E /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71EC33C1BD578140000107E /* Location+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		F71EC33F1BD578140000107E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71EC33D1BD578140000107E /* Location.swift */; settings = {ASSET_TAGS = (); }; };
 		F782C32E1BB77589005BDBB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F782C32D1BB77589005BDBB8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F70A40531BDB592500BFE4A5 /* EditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditController.swift; sourceTree = "<group>"; };
 		F71850981BAD0BE900FFC2B5 /* Table View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F718509B1BAD0BE900FFC2B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F718509D1BAD0BE900FFC2B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +56,10 @@
 		F71850BB1BAD0BE900FFC2B5 /* Table_ViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_ViewUITests.swift; sourceTree = "<group>"; };
 		F71850BD1BAD0BE900FFC2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71850C91BAD0DDF00FFC2B5 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
-		F71850CB1BAD0FEC00FFC2B5 /* TableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
+		F71EC3371BD573D00000107E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F71EC33A1BD575140000107E /* Table_View.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Table_View.xcdatamodel; sourceTree = "<group>"; };
+		F71EC33C1BD578140000107E /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F71EC33D1BD578140000107E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F782C32D1BB77589005BDBB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71EC3381BD573D00000107E /* CoreData.framework in Frameworks */,
 				F782C32E1BB77589005BDBB8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +93,7 @@
 		F718508F1BAD0BE900FFC2B5 = {
 			isa = PBXGroup;
 			children = (
+				F71EC3371BD573D00000107E /* CoreData.framework */,
 				F782C32D1BB77589005BDBB8 /* MapKit.framework */,
 				F718509A1BAD0BE900FFC2B5 /* Table View */,
 				F71850AF1BAD0BE900FFC2B5 /* Table ViewTests */,
@@ -105,14 +115,17 @@
 		F718509A1BAD0BE900FFC2B5 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
+				F71EC33C1BD578140000107E /* Location+CoreDataProperties.swift */,
+				F71EC33D1BD578140000107E /* Location.swift */,
 				F718509B1BAD0BE900FFC2B5 /* AppDelegate.swift */,
+				F70A40531BDB592500BFE4A5 /* EditController.swift */,
 				F718509D1BAD0BE900FFC2B5 /* ViewController.swift */,
 				F718509F1BAD0BE900FFC2B5 /* Main.storyboard */,
-				F71850CB1BAD0FEC00FFC2B5 /* TableData.swift */,
 				F71850C91BAD0DDF00FFC2B5 /* DetailController.swift */,
 				F71850A21BAD0BE900FFC2B5 /* Assets.xcassets */,
 				F71850A41BAD0BE900FFC2B5 /* LaunchScreen.storyboard */,
 				F71850A71BAD0BE900FFC2B5 /* Info.plist */,
+				F71EC3391BD575140000107E /* Table_View.xcdatamodeld */,
 			);
 			path = "Table View";
 			sourceTree = "<group>";
@@ -202,6 +215,7 @@
 				TargetAttributes = {
 					F71850971BAD0BE900FFC2B5 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = SQ44SV4LUJ;
 					};
 					F71850AB1BAD0BE900FFC2B5 = {
 						CreatedOnToolsVersion = 7.0;
@@ -265,10 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71850CC1BAD0FEC00FFC2B5 /* TableData.swift in Sources */,
+				F70A40541BDB592500BFE4A5 /* EditController.swift in Sources */,
 				F718509E1BAD0BE900FFC2B5 /* ViewController.swift in Sources */,
+				F71EC33E1BD578140000107E /* Location+CoreDataProperties.swift in Sources */,
 				F71850CA1BAD0DDF00FFC2B5 /* DetailController.swift in Sources */,
 				F718509C1BAD0BE900FFC2B5 /* AppDelegate.swift in Sources */,
+				F71EC33B1BD575140000107E /* Table_View.xcdatamodeld in Sources */,
+				F71EC33F1BD578140000107E /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Table View/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arinhouck.Table-View";
@@ -421,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Table View/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arinhouck.Table-View";
@@ -516,6 +535,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F71EC3391BD575140000107E /* Table_View.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F71EC33A1BD575140000107E /* Table_View.xcdatamodel */,
+			);
+			currentVersion = F71EC33A1BD575140000107E /* Table_View.xcdatamodel */;
+			path = Table_View.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F71850901BAD0BE900FFC2B5 /* Project object */;
 }

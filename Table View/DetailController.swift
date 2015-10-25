@@ -9,29 +9,45 @@
 import UIKit
 import MapKit
 
-class DetailController: UIViewController {
+class DetailController: UIViewController, EditControllerDelegate {
     
-    var imageName = String()
-    var locationName = String()
-    var locationDesc = String()
-    @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailDescription: UILabel!
     
-    @IBOutlet weak var latitudeTextField: UITextField!
-    @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var latitude: UILabel!
+    @IBOutlet weak var longitude: UILabel!
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var segmentedMapType: UISegmentedControl!
     @IBOutlet weak var map: MKMapView!
     
+    
+    @IBOutlet var nav: UINavigationItem!
+    
+    var location:Location? = nil
+    
+    func editControllerResponse(parameter: AnyObject)
+    {
+        location = parameter as? Location
+        self.setLocation()
+    }
+    
+    func setLocation() {
+        let name = self.location!.name
+        let desc = self.location!.desc
+        let imageName = self.location!.imageName
+        nav.title = name
+        detailDescription.text = desc
+        markAddress(name!)
+        
+        image.image = UIImage(named: imageName!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailTitle.text = self.locationName
-        detailDescription.text = self.locationDesc
-        markAddress(self.locationName)
-        
-        image.image = UIImage(named: "map-" + self.imageName)
+        if location != nil {
+            self.setLocation()
+        }
         
         // Titles for Segemented Button
         segmentedMapType.setTitle("Standard", forSegmentAtIndex: 0)
@@ -67,14 +83,25 @@ class DetailController: UIViewController {
                 self.map.setRegion(region, animated: true)
                 let ani = MKPointAnnotation()
                 ani.coordinate = placemark.location!.coordinate
-                self.latitudeTextField.text = ani.coordinate.latitude.description
-                self.longitudeTextField.text = ani.coordinate.longitude.description
-                ani.title = self.locationName
+                self.latitude.text = ani.coordinate.latitude.description
+                self.longitude.text = ani.coordinate.longitude.description
+                ani.title = self.location?.name!
                 
                 self.map.addAnnotation(ani)
             }
         }
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "edit"
+        {
+            let goNext = segue.destinationViewController as! EditController
+            goNext.delegate = self
+            goNext.location = location
+        }
+        
     }
     
     
